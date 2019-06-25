@@ -9,10 +9,10 @@ script:
   - docker run MounirChenna/react-test npm test  -- --coverage
 
 after_success:
-  - docker build -t MounirChennana/multi-client ./client
-  - docker build -t MounirChennana/multi-nginx ./nginx
-  - docker build -t MounirChennana/multi-server ./server
-  - docker build -t MounirChennana/multi-worker ./worker
+  - docker build -t mounirChennana/multi-client ./client
+  - docker build -t mounirChennana/multi-nginx ./nginx
+  - docker build -t mounirChennana/multi-server ./server
+  - docker build -t mounirChennana/multi-worker ./worker
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$Docker_ID" --password-stdin
 
